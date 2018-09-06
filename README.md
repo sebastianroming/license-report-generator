@@ -1,4 +1,4 @@
-# license-report-generator
+# license-report-generator [![Build Status](https://travis-ci.org/sebastianroming/license-report-generator.svg?branch=master)](https://travis-ci.org/sebastianroming/license-report-generator)
 
 > finds and stores all dependency licenses
 
