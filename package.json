@@ -6,6 +6,17 @@
   "scripts": {
     "test": "xo && ava"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastianroming/license-report-generator.git"
+  },
+  "keywords": [
+    "npm",
+    "bower",
+    "licenses",
+    "license-generator",
+    "create-license-file"
+  ],
   "author": {
     "name": "Sebastian Roming",
     "email": "sebastian@webmonkey.io",
@@ -29,5 +40,9 @@
   },
   "xo": {
     "space": true
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/sebastianroming/license-report-generator/issues"
+  },
+  "homepage": "https://github.com/sebastianroming/license-report-generator#readme"
 }
