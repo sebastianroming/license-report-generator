@@ -27,4 +27,4 @@ return licenser.generateReport(_options)
 MIT © [Sebastian Roming](https://webmonkey.io)
 
 ## Credits
-This is originally based on `[ux-license-report](https://github.com/Banno/ux-license-report)` and `[bower-license](https://github.com/Banno/bower-license)` by Banno, combined into one project.
+This is originally based on [ux-license-report](https://github.com/Banno/ux-license-report) and [bower-license](https://github.com/Banno/bower-license) by Banno, combined into one project.
