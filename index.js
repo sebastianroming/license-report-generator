@@ -7,7 +7,8 @@ const nlf = require('nlf');
 const correctSpdx = require('spdx-correct');
 const bowerLicenses = require('./bower');
 
-const templateContents = fs.readFileSync('template.txt', 'utf-8');
+const templateFile = path.resolve(__dirname, 'template.txt');
+const templateContents = fs.readFileSync(templateFile, 'utf8');
 
 const defaultOpts = {
   context: {},
