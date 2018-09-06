@@ -1,0 +1,33 @@
+{
+  "name": "license-report-generator",
+  "version": "0.0.1",
+  "description": "generates a license report",
+  "main": "index.js",
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "author": {
+    "name": "Sebastian Roming",
+    "email": "sebastian@webmonkey.io",
+    "url": "https://webmonkey.io"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "bower-json": "^0.8.1",
+    "lodash": "^4.17.10",
+    "lodash.template": "^4.4.0",
+    "lodash.uniq": "^4.5.0",
+    "lodash.uniqby": "^4.7.0",
+    "nlf": "^2.0.1",
+    "npm-license": "^0.3.3",
+    "package-license": "^0.4.1",
+    "spdx-correct": "^3.0.0",
+    "treeify": "^1.1.0",
+    "underscore": "^1.9.1",
+    "xo": "^0.23.0"
+  },
+  "xo": {
+    "space": true
+  }
+}
