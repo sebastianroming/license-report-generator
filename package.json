@@ -1,6 +1,6 @@
 {
   "name": "license-report-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "generates a license report",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "url": "https://webmonkey.io"
   },
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "ava": "^0.25.0",
     "bower-json": "^0.8.1",
     "lodash": "^4.17.10",
