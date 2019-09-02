@@ -14,7 +14,8 @@ const templateContents = fs.readFileSync(templateFile, 'utf8');
 const defaultOpts = {
   context: {},
   include: ['npm'],
-  path: process.cwd(),
+  bowerPath: process.cwd(),
+  packagePath: process.cwd(),
   template: templateContents
 };
 
