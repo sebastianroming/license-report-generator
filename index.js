@@ -40,7 +40,7 @@ class Report {
 }
 
 const getLicensesBower = opts => {
-  const bowerDir = path.join(opts.path, 'bower_components');
+  const bowerDir = path.join(opts.bowerPath, 'bower_components');
   const isAGuess = str => {
     return str.match(/\*$/);
   };
@@ -84,7 +84,7 @@ const getLicensesNpm = opts => {
   const lookupLicenses = () => {
     let rootPkg;
     try {
-      rootPkg = require(path.resolve(opts.path, 'package.json'));
+      rootPkg = require(path.resolve(opts.packagePath, 'package.json'));
     } catch (error) {
       return Promise.reject(error);
     }
@@ -92,7 +92,7 @@ const getLicensesNpm = opts => {
     const getLicenses = () => {
       return new Promise((resolve, reject) => {
         nlf.find({
-          directory: opts.path,
+          directory: opts.packagePath,
           depth: 1,
           production: !opts.include.includes('dev'),
           summaryMode: 'simple'
@@ -224,7 +224,7 @@ const generateReport = opts => {
     });
     return licenses;
   }).then(licenses => {
-    const rootPkg = require(path.resolve(opts.path, 'package.json'));
+    const rootPkg = require(path.resolve(opts.packagePath, 'package.json'));
     const pkg = {
       name: rootPkg.name,
       version: rootPkg.version
