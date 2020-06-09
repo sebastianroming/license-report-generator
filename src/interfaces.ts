@@ -3,7 +3,7 @@
  * Sebastian Roming <sebastian@webmonkey.io>
  **/
 
-interface LicenseCheckerOptions {
+interface LicenseReportOptions {
   context: object,
   include: Array<string>,
   useDevDependencies: boolean,
