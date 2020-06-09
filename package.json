@@ -1,7 +1,7 @@
 {
-  "name": "license-report-generator",
+  "name": "@webmonkey/license-report-generator",
   "version": "1.0.0-ALPHA.0",
-  "description": "generates a license report",
+  "description": "Generates a license report, using your bower/npm dependencies",
   "main": "index.js",
   "scripts": {
     "prepublishOnly": "yarn build",
@@ -47,6 +47,7 @@
   },
   "homepage": "https://github.com/sebastianroming/license-report-generator#readme",
   "devDependencies": {
+    "@types/node": "^14.0.12",
     "tslib": "^2.0.0",
     "typescript": "^3.9.5"
   }
