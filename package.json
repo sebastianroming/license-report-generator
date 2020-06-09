@@ -1,10 +1,11 @@
 {
   "name": "license-report-generator",
-  "version": "0.2.0",
+  "version": "1.0.0-ALPHA.0",
   "description": "generates a license report",
   "main": "index.js",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublishOnly": "yarn build",
+    "build": "tsc",
     "test": "xo"
   },
   "repository": {
@@ -44,5 +45,9 @@
   "bugs": {
     "url": "https://github.com/sebastianroming/license-report-generator/issues"
   },
-  "homepage": "https://github.com/sebastianroming/license-report-generator#readme"
+  "homepage": "https://github.com/sebastianroming/license-report-generator#readme",
+  "devDependencies": {
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.5"
+  }
 }
