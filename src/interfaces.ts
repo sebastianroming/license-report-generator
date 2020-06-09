@@ -3,7 +3,7 @@
  * Sebastian Roming <sebastian@webmonkey.io>
  **/
 
-interface LicenseReportOptions {
+interface ILicenseReportOptions {
   context: object,
   include: Array<string>,
   useDevDependencies: boolean,
@@ -11,7 +11,7 @@ interface LicenseReportOptions {
   packagePath: string
 };
 
-interface NpmPackageJson {
+interface INpmPackageJson {
   dependencies?: object,
   devDependencies?: object,
 

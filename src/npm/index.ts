@@ -7,10 +7,10 @@ const nlf = require('nlf');
 
 class FetchNpmLicenses {
 
-  opts: LicenseReportOptions;
+  opts: ILicenseReportOptions;
 
-  protected _defaultOpts: LicenseReportOptions;
-  protected _rootPkg: NpmPackageJson;
+  protected _defaultOpts: ILicenseReportOptions;
+  protected _rootPkg: INpmPackageJson;
 
   // --------------------------------------------------------------------------------------
   constructor() {
@@ -52,7 +52,7 @@ class FetchNpmLicenses {
   }
 
   // --------------------------------------------------------------------------------------
-  isChildPackage(pkg: NpmPackageJson): boolean {
+  isChildPackage(pkg: INpmPackageJson): boolean {
     return (
       (this.opts.include.includes('npm') && Object.keys(this._rootPkg.dependencies || {}).includes(pkg.name)) ||
       (this.opts.include.includes('dev') && Object.keys(this._rootPkg.devDependencies || {}).includes(pkg.name))
