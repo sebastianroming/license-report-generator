@@ -4,6 +4,7 @@
   "description": "generates a license report",
   "main": "index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "test": "xo"
   },
   "repository": {

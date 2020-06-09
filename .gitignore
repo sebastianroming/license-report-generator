@@ -8,6 +8,9 @@ yarn-error.log*
 # Dependency directories
 node_modules
 
+# Dist folders
+dist
+
 # DOTENV environment file
 .env
 
