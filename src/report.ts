@@ -8,7 +8,7 @@ const fs = require('fs');
 class Report {
 
   protected _generatedString: string;
-  protected _package: object;
+  protected _package: INpmPackageJson;
 
   // --------------------------------------------------------------------------------------
   constructor() {
@@ -27,7 +27,7 @@ class Report {
   }
 
   // --------------------------------------------------------------------------------------
-  getPackageInfo(): object {
+  getPackageInfo(): INpmPackageJson {
     return this._package;
   }
 
