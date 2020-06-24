@@ -1,14 +1,14 @@
-# @webmonkey/license-report-generator [![Build Status](https://travis-ci.org/sebastianroming/license-report-generator.svg?branch=master)](https://travis-ci.org/sebastianroming/license-report-generator)
+# @wbmnky/license-report-generator [![Build Status](https://travis-ci.org/sebastianroming/license-report-generator.svg?branch=master)](https://travis-ci.org/sebastianroming/license-report-generator)
 
 > finds and stores all dependency licenses
 
 ## Install
 ```
-npm install --save @webmonkey/license-report-generator
+npm install --save @wbmnky/license-report-generator
 ```
 or if you're using yarn:
 ```
-yarn add @webmonkey/license-report-generator
+yarn add @wbmnky/license-report-generator
 ```
 
 
