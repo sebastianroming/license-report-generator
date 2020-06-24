@@ -1,2 +1,22 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
 node_modules
+
+# Dist folders
+dist
+
+# DOTENV environment file
+.env
+
+# IDE settings folder
+.idea
+
+# Project level specific files
 example.js
+demo/output.*
