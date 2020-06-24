@@ -1,10 +1,14 @@
 {
-  "name": "license-report-generator",
-  "version": "0.2.0",
-  "description": "generates a license report",
-  "main": "index.js",
+  "name": "@webmonkey/license-report-generator",
+  "version": "2.0.0",
+  "description": "Generates a license report, using your bower/npm dependencies",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "xo"
+    "prepublishOnly": "yarn build",
+    "build": "yarn copy:assets && tsc",
+    "copy:assets": "copyfiles -f src/assets/**/* dist/assets",
+    "demo": "yarn build && node demo/index.js",
+    "test": "echo \"No tests for this\""
   },
   "repository": {
     "type": "git",
@@ -24,24 +28,18 @@
   },
   "license": "MIT",
   "dependencies": {
-    "bower-json": "^0.8.1",
     "lodash": "^4.17.10",
-    "lodash.template": "^4.4.0",
-    "lodash.uniq": "^4.5.0",
-    "lodash.uniqby": "^4.7.0",
-    "nlf": "^2.0.1",
-    "npm-license": "^0.3.3",
-    "package-license": "^0.4.1",
-    "spdx-correct": "^3.0.0",
-    "treeify": "^1.1.0",
-    "underscore": "^1.9.1",
-    "xo": "^0.23.0"
-  },
-  "xo": {
-    "space": true
+    "nlf": "^2.1.1",
+    "spdx-correct": "^3.0.0"
   },
   "bugs": {
     "url": "https://github.com/sebastianroming/license-report-generator/issues"
   },
-  "homepage": "https://github.com/sebastianroming/license-report-generator#readme"
+  "homepage": "https://github.com/sebastianroming/license-report-generator#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "copyfiles": "^2.3.0",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.5"
+  }
 }
