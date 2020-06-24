@@ -3,9 +3,9 @@
  * Sebastian Roming <sebastian@webmonkey.io>
  **/
 
-const nlf = require('nlf');
+// import nlf from 'nlf';
 
-class FetchNpmLicenses {
+export class FetchNpmLicenses {
 
   opts: ILicenseReportOptions;
 
@@ -16,7 +16,7 @@ class FetchNpmLicenses {
   constructor() {
     this._defaultOpts = this.opts = {
       context: {},
-      include: ['npm'],
+      include: ['collectors'],
       useDevDependencies: false,
       bowerPath: process.cwd(),
       packagePath: process.cwd()
@@ -35,7 +35,7 @@ class FetchNpmLicenses {
 
     return new Promise((resolve, reject) => {
 
-      nlf.find({
+      /*nlf.find({
         directory: this.opts.packagePath,
         depth: 1,
         production: !this.opts.useDevDependencies,
@@ -45,7 +45,7 @@ class FetchNpmLicenses {
           return reject(err);
         }
         resolve(data);
-      });
+      });*/
 
     });
 
@@ -54,7 +54,7 @@ class FetchNpmLicenses {
   // --------------------------------------------------------------------------------------
   isChildPackage(pkg: INpmPackageJson): boolean {
     return (
-      (this.opts.include.includes('npm') && Object.keys(this._rootPkg.dependencies || {}).includes(pkg.name)) ||
+      (this.opts.include.includes('collectors') && Object.keys(this._rootPkg.dependencies || {}).includes(pkg.name)) ||
       (this.opts.include.includes('dev') && Object.keys(this._rootPkg.devDependencies || {}).includes(pkg.name))
     );
   }
