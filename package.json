@@ -1,6 +1,6 @@
 {
-  "name": "@webmonkey/license-report-generator",
-  "version": "2.0.0",
+  "name": "@wbmnky/license-report-generator",
+  "version": "2.0.2",
   "description": "Generates a license report, using your bower/npm dependencies",
   "main": "dist/index.js",
   "scripts": {
@@ -9,6 +9,9 @@
     "copy:assets": "copyfiles -f src/assets/**/* dist/assets",
     "demo": "yarn build && node demo/index.js",
     "test": "echo \"No tests for this\""
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
