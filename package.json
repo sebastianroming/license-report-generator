@@ -7,7 +7,8 @@
     "prepublishOnly": "yarn build",
     "build": "yarn copy:assets && tsc",
     "copy:assets": "copyfiles -f src/assets/**/* dist/assets",
-    "demo": "yarn build && node demo/index.js"
+    "demo": "yarn build && node demo/index.js",
+    "test": "echo \"No tests for this\""
   },
   "repository": {
     "type": "git",
@@ -30,9 +31,6 @@
     "lodash": "^4.17.10",
     "nlf": "^2.1.1",
     "spdx-correct": "^3.0.0"
-  },
-  "xo": {
-    "space": true
   },
   "bugs": {
     "url": "https://github.com/sebastianroming/license-report-generator/issues"
