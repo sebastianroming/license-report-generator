@@ -89,10 +89,9 @@ return licenser.reporter.generate({})
 
 ## Changelog
 #### 2.0.0
-- Removed `bower` support
+- Removed `bower` support (fallback: [legacy version 0.2.0 @ npm](https://npmjs.com/package/license-report-generator))
 - Return all found packages as plain object, without formatting / writing to file 
 - Added second example template for display as a table
-- 
 
 ## License
 
