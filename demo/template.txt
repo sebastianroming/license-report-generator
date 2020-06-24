@@ -1,0 +1,10 @@
+# Dependency Licenses
+## <%- pkg.name %> (<%- pkg.version %>)
+-------------------
+<% _.forEach(licenses, function(license) { %>
+### <%- license.name %><% if (license.homepage) { %>
+  * **URL:** <%- license.homepage %><% } %><% if (license.version) { %>
+  * **Version:** <%- license.version %><% } %><% if (license.licenses) { %>
+  * **License:** <%- license.licenses.join(', ') %><% } %><% if (license.description) { %>
+  * **Description:** <%- license.description %><% } %>
+<% }); %>

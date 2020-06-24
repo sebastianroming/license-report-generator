@@ -31,5 +31,8 @@
   },
   "include": [
     "./src/**/*"
+  ],
+  "assets": [
+    "assets/**/*"
   ]
 }
