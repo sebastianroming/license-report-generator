@@ -29,7 +29,7 @@ yarn add @wbmnky/license-report-generator
 
 #### Find licenses and write to file
 ```js
-const licenser = require('@webmonkey/license-report-generator');
+const licenser = require('@wbmnky/license-report-generator');
 
 const options = { 
   useDevDependencies: true
@@ -44,7 +44,7 @@ return licenser.reporter.generate(options)
 
 #### Return licenses as plain object
 ```js
-const licenser = require('@webmonkey/license-report-generator');
+const licenser = require('@wbmnky/license-report-generator');
 
 const options = { 
   useDevDependencies: true,
@@ -60,7 +60,7 @@ return licenser.reporter.generate(options)
 
 #### Use with your own template
 ```js
-const licenser = require('@webmonkey/license-report-generator');
+const licenser = require('@wbmnky/license-report-generator');
 const fs       = require('fs');
 const path     = require('path');
 
@@ -77,7 +77,7 @@ return licenser.reporter.generate(options)
 
 #### Use with default table template
 ```js
-const licenser = require('@webmonkey/license-report-generator');
+const licenser = require('@wbmnky/license-report-generator');
 
 return licenser.reporter.generate({})
                         .then(rep => rep.table())
