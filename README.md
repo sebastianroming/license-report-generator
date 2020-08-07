@@ -103,6 +103,9 @@ license-report-generator [--table] [--depth Number|Infinity] [--template-dir pat
 
 
 ## Changelog
+#### 2.1.0
+- Added CLI option to use as a global installed npm package
+
 #### 2.0.0
 - Removed `bower` support (fallback: [legacy version 0.2.0 @ npm](https://npmjs.com/package/license-report-generator))
 - Return all found packages as plain object, without formatting / writing to file 
