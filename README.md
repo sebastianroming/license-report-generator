@@ -96,7 +96,7 @@ license-report-generator [--table] [--depth Number|Infinity] [--template-dir pat
 - `--table` (Default: `false`) - use the default table template
 - `--depth {number}|Infinity` (Default: `1`) - package depth, 0 is current project only
 - `--with-dev-dependencies` (Default: `false`) - whether to include `devDependencies` in the license report or not
-- `--out-dir` (Default: `__dirname`) - the output directory where the license file is written to
+- `--out-dir` (Default: `process.cwd()`) - the output directory where the license file is written to
 - `--out-file` (Default: `license-output.md`) - the output filename of the license file
 - `--template-dir` (Default: `null`) - if you want to use an own template, specify the directory where to find the template
 - `--template-file` (Default: `null`) - if you want to use an own template, specify the filename of the template

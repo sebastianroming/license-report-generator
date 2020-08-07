@@ -5,7 +5,7 @@ const cliFs       = require('fs');
 const {argv}      = require('yargs');
 const cliLicenser = require('./index');
 
-const outputDirectory = argv['out-dir'] || `${__dirname}`;
+const outputDirectory = argv['out-dir'] || `${process.cwd()}`;
 const outputFilename  = argv['out-file'] || 'license-output.md';
 
 const _isTable         = argv['table'] || false;
@@ -24,7 +24,7 @@ let options: ICliOptions = {
 };
 
 if (argv['template-file']) {
-  const templateDirectory = argv['template-dir'] || `${__dirname}/assets/`;
+  const templateDirectory = argv['template-dir'] || `${process.cwd()}/assets/`;
   const templateFilename  = argv['template-file'] || 'template.txt';
   const templateContents  = cliFs.readFileSync(cliPath.resolve(templateDirectory, templateFilename), 'utf8');
   options.template        = templateContents;
