@@ -1,6 +1,6 @@
 {
   "name": "@wbmnky/license-report-generator",
-  "version": "2.1.0-beta.0",
+  "version": "2.1.0-beta.1",
   "description": "Generates a license report, using your bower/npm dependencies",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,9 @@
     "demo": "yarn build && node demo/index.js",
     "test": "echo \"No tests for this\""
   },
-  "bin": "dist/cli.js",
+  "bin": {
+    "license-report-generator": "dist/cli.js"
+  },
   "publishConfig": {
     "access": "public"
   },
