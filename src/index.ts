@@ -210,10 +210,11 @@ class Report {
 
   // --------------------------------------------------------------------------------------
   protected _isChildPackage(pkg: INpmPackageJson, rootPkg: INpmPackageJson): boolean {
-    return <boolean>(
+    /*return <boolean>(
       (Object.keys(rootPkg.dependencies || {}).includes(pkg.name)) ||
       (this._options.useDevDependencies && Object.keys(rootPkg.devDependencies || {}).includes(pkg.name))
-    );
+    );*/
+    return <boolean>(pkg.name !== rootPkg.name);
   }
 
   // --------------------------------------------------------------------------------------
