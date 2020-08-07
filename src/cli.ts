@@ -1,22 +1,38 @@
 #!/usr/bin/env node
 
-const cliPath = require('path');
-const cliFs = require('fs');
-const { argv } = require('yargs');
+const cliPath     = require('path');
+const cliFs       = require('fs');
+const {argv}      = require('yargs');
 const cliLicenser = require('./index');
 
-const outputDirectory = argv['out-dir'];
-const outputFilename = argv['out-file'];
+const outputDirectory = argv['out-dir'] || `${__dirname}`;
+const outputFilename  = argv['out-file'] || 'license-output.md';
 
-const templateDirectory = argv['template-dir'] || `${__dirname}/assets/`;
-const templateFilename = argv['template-file'] || 'template.txt';
-const templateFile = cliPath.resolve(templateDirectory, templateFilename);
+const _isTable         = argv['table'] || false;
+const _depth           = argv['depth'] || 1;
+const _devDependencies = argv['with-dev-dependencies'] || false;
 
-//const templateFile = cliPath.resolve(__dirname + '/assets/', 'template-table.txt');
-const templateContents = cliFs.readFileSync(templateFile, 'utf8');
-
-const options = {
-  template: templateContents
+interface ICliOptions {
+  template?: string
+  depth?: number,
+  useDevDependencies?: boolean
 };
 
-cliLicenser.reporter.generate(options).then((rep: Report) => rep.table()).then((rep: Report) => rep.write(cliPath.resolve(outputDirectory, outputFilename)));
+let options: ICliOptions = {
+  depth: _depth,
+  useDevDependencies: _devDependencies
+};
+
+if (argv['template-file']) {
+  const templateDirectory = argv['template-dir'] || `${__dirname}/assets/`;
+  const templateFilename  = argv['template-file'] || 'template.txt';
+  const templateContents  = cliFs.readFileSync(cliPath.resolve(templateDirectory, templateFilename), 'utf8');
+  options.template        = templateContents;
+}
+
+if (_isTable) {
+  cliLicenser.reporter.table().generate(options).then((rep: Report) => rep.write(cliPath.resolve(outputDirectory, outputFilename)));
+} else {
+  cliLicenser.reporter.generate(options).then((rep: Report) => rep.write(cliPath.resolve(outputDirectory, outputFilename)));
+}
+
