@@ -93,17 +93,22 @@ class Report {
       return Array.prototype.concat.apply([], results);
     }).then(licenses => {
       return licenses.map(info => {
-        if (info.licenses.length > 0) {
-          info.licenses = info.licenses.map((license: any) => {
-            if (typeof license === 'string') {
-              return license;
-            }
-            if (license.type) {
-              return license.type;
-            }
-            return 'Unknown';
-          });
+        if (!Array.isArray(info.licenses)) {
+            info.licenses = ['Unknown']
         }
+        return info;
+      });
+    }).then(licenses => {
+      return licenses.map(info => {
+        info.licenses = info.licenses.map((license: any) => {
+          if (typeof license === 'string') {
+            return license;
+          }
+          if (license.type) {
+            return license.type;
+          }
+          return 'Unknown';
+        });
 
         return info;
       });
