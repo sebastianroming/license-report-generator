@@ -93,17 +93,22 @@ class Report {
       return Array.prototype.concat.apply([], results);
     }).then(licenses => {
       return licenses.map(info => {
-        if (info.licenses.length > 0) {
-          info.licenses = info.licenses.map((license: any) => {
-            if (typeof license === 'string') {
-              return license;
-            }
-            if (license.type) {
-              return license.type;
-            }
-            return 'Unknown';
-          });
+        if (!Array.isArray(info.licenses)) {
+            info.licenses = ['Unknown']
         }
+        return info;
+      });
+    }).then(licenses => {
+      return licenses.map(info => {
+        info.licenses = info.licenses.map((license: any) => {
+          if (typeof license === 'string') {
+            return license;
+          }
+          if (license.type) {
+            return license.type;
+          }
+          return 'Unknown';
+        });
 
         return info;
       });
@@ -210,10 +215,7 @@ class Report {
 
   // --------------------------------------------------------------------------------------
   protected _isChildPackage(pkg: INpmPackageJson, rootPkg: INpmPackageJson): boolean {
-    return <boolean>(
-      (Object.keys(rootPkg.dependencies || {}).includes(pkg.name)) ||
-      (this._options.useDevDependencies && Object.keys(rootPkg.devDependencies || {}).includes(pkg.name))
-    );
+    return <boolean>(pkg.name !== rootPkg.name);
   }
 
   // --------------------------------------------------------------------------------------

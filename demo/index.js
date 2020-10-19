@@ -7,6 +7,8 @@ const templateFile = path.resolve(__dirname, 'template-table.txt');
 const templateContents = fs.readFileSync(templateFile, 'utf8');
 
 const config = {
+  depth: Infinity,
+  useDevDependencies: true,
   template: templateContents
 };
 
