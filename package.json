@@ -1,6 +1,6 @@
 {
   "name": "@wbmnky/license-report-generator",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Generates a license report, using your bower/npm dependencies",
   "main": "dist/index.js",
   "scripts": {
