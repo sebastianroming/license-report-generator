@@ -1,4 +1,5 @@
-# @wbmnky/license-report-generator [![CI Build](https://github.com/sebastianroming/license-report-generator/actions/workflows/build-package.yml/badge.svg)](https://github.com/sebastianroming/license-report-generator/actions/workflows/build-package.yml)
+# @wbmnky/license-report-generator 
+[![CI Build](https://github.com/sebastianroming/license-report-generator/actions/workflows/build-package.yml/badge.svg)](https://github.com/sebastianroming/license-report-generator/actions/workflows/build-package.yml)
 
 > finds and stores all dependency licenses
 
@@ -103,6 +104,10 @@ license-report-generator [--table] [--depth Number|Infinity] [--template-dir pat
 
 
 ## Changelog
+#### 2.2.0
+- Removed Travis CI, replaced with GitHub Actions (`build` and `publish`)
+- Updated dependencies to latest versions
+
 #### 2.1.0
 - Added CLI option to use as a global installed npm package
 
