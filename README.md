@@ -1,4 +1,4 @@
-# @wbmnky/license-report-generator [![Build Status](https://travis-ci.org/sebastianroming/license-report-generator.svg?branch=master)](https://travis-ci.org/sebastianroming/license-report-generator)
+# @wbmnky/license-report-generator [![CI Build](https://github.com/sebastianroming/license-report-generator/actions/workflows/build-package.yml/badge.svg)](https://github.com/sebastianroming/license-report-generator/actions/workflows/build-package.yml)
 
 > finds and stores all dependency licenses
 
