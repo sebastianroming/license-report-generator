@@ -1,7 +1,5 @@
 name: Publish to NPM (dry-run)
-on:
-  release:
-    types: [created]
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
