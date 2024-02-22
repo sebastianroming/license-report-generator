@@ -25,7 +25,7 @@ const _           = require('lodash');
 const correctSpdx = require('spdx-correct');
 const fs          = require('fs');
 
-class Report {
+class LicenseReport {
 
   protected _generatedString: string;
   protected _generatedPlain: object;
@@ -60,7 +60,7 @@ class Report {
   }
 
   // --------------------------------------------------------------------------------------
-  table(): Report {
+  table(): LicenseReport {
     this._options.template = fs.readFileSync(path.resolve(__dirname + '/assets/', 'template-table.txt'), 'utf-8');
     return this;
   }
@@ -161,7 +161,7 @@ class Report {
       };
 
       const compiledTemplate = _.template(this._options.template);
-      this._generatedPlain   = {licenses, pkg};
+      this._generatedPlain   = {licenses, pkg, generatedAt: new Date()};
       this._generatedString  = compiledTemplate(this._generatedPlain);
       this._warnings         = warnings;
 
@@ -245,4 +245,4 @@ class Report {
 
 }
 
-exports.reporter = new Report();
+exports.reporter = new LicenseReport();

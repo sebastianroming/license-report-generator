@@ -25,6 +25,7 @@
     "outDir": "./dist",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "removeComments": true,
     "types": [
       "node"
     ]
