@@ -101,8 +101,11 @@ license-report-generator [--table] [--depth Number|Infinity] [--template-dir pat
 
 ## Changelog
 #### 2.2.0
-- Removed Travis CI, replaced with GitHub Actions (`build` and `publish`)
-- Updated dependencies to latest versions
+- feat: Added new variable `generatedAt` to use in a template
+- fix: Removed Travis CI, replaced with GitHub Actions (`build` and `publish`)
+- fix: Renamed interfaces and types
+- chore: Replaced `yarn` with `pnpm` as the internal package manager
+- chore: Updated dependencies to latest versions
 
 #### 2.1.0
 - Added CLI option to use as a global installed npm package
