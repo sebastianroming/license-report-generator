@@ -1,14 +1,11 @@
-# @wbmnky/license-report-generator [![Build Status](https://travis-ci.org/sebastianroming/license-report-generator.svg?branch=master)](https://travis-ci.org/sebastianroming/license-report-generator)
+# @wbmnky/license-report-generator 
+[![CI Build](https://github.com/sebastianroming/license-report-generator/actions/workflows/build-package.yml/badge.svg)](https://github.com/sebastianroming/license-report-generator/actions/workflows/build-package.yml)
 
 > finds and stores all dependency licenses
 
 ## Install
 ```
-npm install --save @wbmnky/license-report-generator
-```
-or if you're using yarn:
-```
-yarn add @wbmnky/license-report-generator
+pnpm add @wbmnky/license-report-generator
 ```
 
 
@@ -103,6 +100,13 @@ license-report-generator [--table] [--depth Number|Infinity] [--template-dir pat
 
 
 ## Changelog
+#### 2.2.0
+- feat: Added new variable `generatedAt` to use in a template
+- fix: Removed Travis CI, replaced with GitHub Actions (`build` and `publish`)
+- fix: Renamed interfaces and types
+- chore: Replaced `yarn` with `pnpm` as the internal package manager
+- chore: Updated dependencies to latest versions
+
 #### 2.1.0
 - Added CLI option to use as a global installed npm package
 

@@ -1,5 +1,6 @@
 # Dependency Licenses
 ## <%- pkg.name %> (<%- pkg.version %>)
+### Generated at: <%- generatedAt %>
 -------------------
 <% _.forEach(licenses, function(license) { %>
 ### <%- license.name %><% if (license.homepage) { %>

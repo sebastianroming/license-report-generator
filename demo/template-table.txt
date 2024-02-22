@@ -1,5 +1,6 @@
 # Dependency Licenses
 ## <%- pkg.name %> (<%- pkg.version %>)
+### Generated at: <%- generatedAt %>
 -------------------
 
 | Package Name | Version | URL | Description | License |
