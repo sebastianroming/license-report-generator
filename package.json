@@ -13,6 +13,8 @@
     "build": "pnpm copy:assets && tsc",
     "copy:assets": "copyfiles -f src/assets/**/* dist/assets",
     "demo": "pnpm build && node demo/index.js",
+    "release": "pnpm build && changeset publish",
+    "version-packages": "changeset version",
     "test": "echo \"No tests for this\""
   },
   "keywords": [
@@ -34,6 +36,7 @@
     "url": "git+https://github.com/sebastianroming/license-report-generator.git"
   },
   "dependencies": {
+    "@changesets/cli": "^2.27.1",
     "lodash": "^4.17.21",
     "nlf": "^2.1.1",
     "spdx-correct": "^3.2.0",
