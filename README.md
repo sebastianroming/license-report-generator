@@ -5,11 +5,7 @@
 
 ## Install
 ```
-npm install --save @wbmnky/license-report-generator
-```
-or if you're using yarn:
-```
-yarn add @wbmnky/license-report-generator
+pnpm add @wbmnky/license-report-generator
 ```
 
 
