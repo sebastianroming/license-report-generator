@@ -1,0 +1,5 @@
+# Ignore directories that shouldn't be published
+.changeset
+.github
+src
+demo

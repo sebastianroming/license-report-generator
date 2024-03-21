@@ -2,7 +2,6 @@
   "name": "@wbmnky/license-report-generator",
   "version": "2.3.0",
   "description": "Generates a license report, using your bower/npm dependencies",
-  "main": "dist/index.js",
   "author": {
     "name": "Sebastian Roming",
     "email": "sebastian@webmonkey.io",
@@ -19,14 +18,17 @@
   },
   "keywords": [
     "npm",
-    "bower",
     "licenses",
     "license-generator",
     "create-license-file"
   ],
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "bin": {
-    "license-report-generator": "dist/cli.js"
+    "license-report-generator": "./dist/cli.js"
   },
   "publishConfig": {
     "access": "public"
