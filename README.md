@@ -100,6 +100,9 @@ license-report-generator [--table] [--depth Number|Infinity] [--template-dir pat
 
 
 ## Changelog
+#### > 2.2.0
+Subsequent changelogs can be found in the [Releases section](https://github.com/sebastianroming/license-report-generator/releases) of this repository.
+
 #### 2.2.0
 - feat: Added new variable `generatedAt` to use in a template
 - fix: Removed Travis CI, replaced with GitHub Actions (`build` and `publish`)
