@@ -18,15 +18,13 @@
   },
   "keywords": [
     "npm",
-    "bower",
     "licenses",
     "license-generator",
     "create-license-file"
   ],
   "main": "./dist/index.js",
   "files": [
-    "dist",
-    "demo"
+    "dist"
   ],
   "license": "MIT",
   "bin": {
