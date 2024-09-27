@@ -1,5 +1,11 @@
 # @wbmnky/license-report-generator
 
+## 2.3.2
+
+### Patch Changes
+
+- 7519c43: Bump micromatch from 4.0.5 to 4.0.8
+
 ## 2.3.1
 
 ### Patch Changes
