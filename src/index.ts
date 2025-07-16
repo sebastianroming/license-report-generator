@@ -21,9 +21,10 @@ interface INpmPackageJson {
 
 const nlf         = require('nlf');
 const path        = require('path');
-const _           = require('lodash');
+//const _           = require('lodash');
 const correctSpdx = require('spdx-correct');
 const fs          = require('fs');
+const { uniqBy }  = require('./utils');
 
 class LicenseReport {
 
@@ -136,10 +137,10 @@ class LicenseReport {
         return licenseInfo;
       });
     }).then(licenses => {
-      return _.uniqBy(licenses, (info: any) => {
+      return uniqBy(licenses, (info: any) => {
         return `${info.name}@${info.version}`;
       }).map((info: any) => {
-        info.licenses = _.uniq(info.licenses);
+        info.licenses = [...new Set(info.licenses)];
         return info;
       });
     }).then(licenses => {
